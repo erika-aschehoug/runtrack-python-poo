@@ -6,6 +6,7 @@
 
 # Créez une instance de chaque classe Rectangle et Cercle et utilisez-les pour tester les
 # différentes surcharges de la méthode aire en affichant les résultats en console.
+import math 
 
 class Forme:
 
@@ -19,3 +20,9 @@ class Cercle(Forme):
     def __init__(self, radius):
         Forme.__init__(self)
         self.radius=radius
+        
+    def aire(self):
+        return (self.radius ** 2) * math.pi
+    
+cercle = Cercle (15)
+print(f"L'aire du cercle est de {cercle.aire()}")
